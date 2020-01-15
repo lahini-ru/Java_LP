@@ -1,7 +1,5 @@
 package EncTest;
 
-import java.util.Scanner;
-
 public class EncapsulationEx {
 	
 	private int accountNumber=0;
