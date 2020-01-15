@@ -1,27 +1,40 @@
-package EncTest;
+package InnerEx;
 
-import java.util.Scanner;
+import InnerEx.University.Staff;
 
 public class Application {
 
 	public static void main(String[] args) {
 
-		EncapsulationEx obj=new EncapsulationEx();
+		University uni=new University(); //encapsulation achieved here
+		uni.setUniName("UOC");
+		uni.setLocation("Colombo");
+		uni.setUniId(001);
+		University.setDeanName("A. Perera");
+		uni.register();
+		
+		University.Department dep=uni.new Department(); //member inner class declared here
+		dep.setDepId(1001);
+		dep.setDepName("UCSC");
+		dep.setMajorSub("CS");
+		dep.learn();
+		
+		University.Staff stf=new University.Staff(); //static inner class declared here
+		stf.setLecName("B. Silva");
+		Staff.setStaffId(101);
+		stf.lecture();
+		
+		Student std=new Student() {
 
-		System.out.println("Enter the account number");
-		Scanner sc=new Scanner(System.in);
-		obj.setAccountNumber(sc.nextInt());
-		
-		System.out.println("Enter the bank balance");
-		obj.setBankBalance(sc.nextDouble());
-		
-		System.out.println("Enter the debit amount");
-		obj.setDebitAmount(sc.nextDouble());
-		
-		double bBal=(double)obj.getBankBalance();
-		double dBal=(double)obj.getDebitAmount();
-		double remainBal=bBal-dBal;
-		System.out.println("Your remaining balance is "+remainBal);
+			@Override
+			public void registerStd() {
+				System.out.println(stdNum+" is registered");
+				
+			}
+			
+		};
+		std.registerStd();
+		//anonymous class declared here
 		
 	}
 
