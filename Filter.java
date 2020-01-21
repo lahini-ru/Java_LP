@@ -16,8 +16,8 @@ public class Filter {
 		
 		List<Employee> filteredEmp1=Emp.getEmployee()
 				.stream()
-				.map(e->new Emp(name::"Dr"+Employee.getEmployee())
-				.collect(Collectors.toList());
+				.map(e->new Emp(name+"Dr"+Employee.getEmployee())
+				.collect(Collectors.toList()));
 		
 		System.out.println(filteredEmp1);
 		
@@ -30,7 +30,7 @@ public class Filter {
 		
 		List<Employee> filteredEmp1=Emp.getEmployee()
 				.stream()
-				.sorted(e1,e2)->new Integer(e1,getName().length).compareTo(e2.getName().length)
+				.sorted((e1,e2)->new Integer(e1,getName().length()).compareTo(e2.getName().length())
 				.collect(Collectors.toList());
 		
 		System.out.println(filteredEmp1);
