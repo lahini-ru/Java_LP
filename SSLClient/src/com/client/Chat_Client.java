@@ -18,7 +18,7 @@ public class Chat_Client {
         String serverName = "localhost";
         Security.addProvider(new Provider());
         System.setProperty("javax.net.ssl.trustStore","myTrustStore.jts");
-        System.setProperty("javax.net.ssl.trustStorePassword","123456");
+        System.setProperty("javax.net.ssl.trustStorePassword","1234567");
         System.setProperty("javax.net.debug","all");
         try
         {
