@@ -19,8 +19,8 @@ public class HTTPSClient1 {
 
     public static void main(String[] args){
         // Initialize configuration
-        System.setProperty("javax.net.ssl.trustStore", "test.jks");
-        System.setProperty("javax.net.ssl.trustStoreType", "jks");
+        System.setProperty("javax.net.ssl.trustStore", "src/HTTP_Client/myKeyStore.jks");
+        System.setProperty("javax.net.ssl.trustStorePassword", "1234567");
 
         try{
             URL url = new URL("https://127.0.0.1:9999");
